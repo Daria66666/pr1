@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4" style="padding: 0px" align="left">
+            <div class="card card-body bg-light" style="height: 500px">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-главная-list" data-toggle="list" href="#list-главная" role="tab" aria-controls="Счета">Главная</a>
+                    <a class="list-group-item list-group-item-action" id="list-счета-list" data-toggle="list" href="#list-счета" role="tab" aria-controls="Счета">Счета</a>
+                    <a class="list-group-item list-group-item-action" id="list-статистика-list" data-toggle="list" href="#list-статистика" role="tab" aria-controls="Статистика">Статистика</a>
+                    <a class="list-group-item list-group-item-action" id="list-копилка-list" data-toggle="list" href="#list-копилка" role="tab" aria-controls="Копилка">Копилка</a>
+                    <a class="list-group-item list-group-item-action" id="list-скидки-list" data-toggle="list" href="#list-скидки" role="tab" aria-controls="Скидки">Скидки</a>
+                    <a class="list-group-item list-group-item-action" id="list-настройки-list" data-toggle="list" href="#list-настройки" role="tab" aria-controls="Настройки">Настройки</a>
+                    <a class="list-group-item list-group-item-action" id="list-помощь-list" data-toggle="list" href="#list-помощь" role="tab" aria-controls="Помощь">Помощь</a>
+                    <a class="list-group-item list-group-item-action" id="list-выход-list" data-toggle="list" href="#list-выход" role="tab" aria-controls="Выйти">Выйти</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-8" style="padding: 0px" align="center">
+            <div class="card card-body bg-light" style="height: 500px">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-главная" role="tabpanel" aria-labelledby="list-главная-list">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Глагне</li>
+                            <li><button type="button" class="btn btn-success">Добавить транзакцию</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="list-счета" role="tabpanel" aria-labelledby="list-счета-list">Вот счета</div>
+                    <div class="tab-pane fade" id="list-статистика" role="tabpanel" aria-labelledby="list-статистика-list">Вот статистика</div>
+                    <div class="tab-pane fade" id="list-копилка" role="tabpanel" aria-labelledby="list-копилка-list">Вот копилка</div>
+                    <div class="tab-pane fade" id="list-скидки" role="tabpanel" aria-labelledby="list-скидки-list">Вот скидки</div>
+                    <div class="tab-pane fade" id="list-настройки" role="tabpanel" aria-labelledby="list-настройки-list">Вот настройки</div>
+                    <div class="tab-pane fade" id="list-помощь" role="tabpanel" aria-labelledby="list-помощь-list">Вот помощь</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
