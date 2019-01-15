@@ -30,7 +30,14 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-главная" role="tabpanel" aria-labelledby="list-главная-list">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Глагне</li>
+                            <li class="list-group-item">
+                                <h3>{{ date }}</h3>
+                            </li>
+                            <ul>
+                                {% for item in accounts %}
+                                <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
                             <li><button type="button" class="btn btn-success">Добавить транзакцию</button></li>
                         </ul>
                     </div>

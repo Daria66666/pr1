@@ -14,6 +14,12 @@ def empty_page(request):
     return render_to_response('index.html', context)
 
 def main_page(request):
+    from datetime import datetime
+    l = Account.objects.all()
     context = {
+        'date': datetime.today(),
+        'accounts': [
+            str(a.value) for a in l
+        ]
     }
     return render_to_response('main_page.html', context)
