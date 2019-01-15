@@ -10,9 +10,11 @@
 </head>
 <body>
 <div class="container-fluid">
+{% if  auth == True %}
     <div class="row">
         <div class="col-4" style="padding: 0px" align="left">
             <div class="card card-body bg-light" style="height: 500px">
+                <p>Здравствуй, {{ name }}</p>
                 <div class="list-group" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-главная-list" data-toggle="list" href="#list-главная" role="tab" aria-controls="Счета">Главная</a>
                     <a class="list-group-item list-group-item-action" id="list-счета-list" data-toggle="list" href="#list-счета" role="tab" aria-controls="Счета">Счета</a>
@@ -51,6 +53,9 @@
             </div>
         </div>
     </div>
+    {% else %}
+<a href="login_page">Пожалуйста, войдите на сайт</a>
+{% endif %}
 </div>
 </body>
 </html>
