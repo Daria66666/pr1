@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from .models import Account
@@ -41,3 +41,10 @@ def login_user(request):
 
 def login_page(request):
     return render_to_response('login_page.html')
+
+def do_logout(request):
+    if request.user.is_authentificated:
+        logout(request)
+        return HttpResponseRedirect('login_page')
+    else:
+        return HttpResponse('Ты не залогинен')
