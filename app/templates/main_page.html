@@ -15,6 +15,7 @@
         <div class="col-4" style="padding: 0px" align="left">
             <div class="card card-body bg-light" style="height: 500px">
                 <p>Здравствуй, {{ name }}</p>
+                <p></p>
                 <div class="list-group" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-главная-list" data-toggle="list" href="#list-главная" role="tab" aria-controls="Счета">Главная</a>
                     <a class="list-group-item list-group-item-action" id="list-счета-list" data-toggle="list" href="#list-счета" role="tab" aria-controls="Счета">Счета</a>
@@ -23,25 +24,24 @@
                     <a class="list-group-item list-group-item-action" id="list-скидки-list" data-toggle="list" href="#list-скидки" role="tab" aria-controls="Скидки">Скидки</a>
                     <a class="list-group-item list-group-item-action" id="list-настройки-list" data-toggle="list" href="#list-настройки" role="tab" aria-controls="Настройки">Настройки</a>
                     <a class="list-group-item list-group-item-action" id="list-помощь-list" data-toggle="list" href="#list-помощь" role="tab" aria-controls="Помощь">Помощь</a>
-                    <a class="list-group-item list-group-item-action" id="list-выход-list" data-toggle="list"  role="tab" aria-controls="Выйти" act>Выйти</a>
                 </div>
+                <p></p>
+                <a class="btn btn-danger" href="/do_logout" role="button">Выйти</a>
+                <p></p>
             </div>
         </div>
         <div class="col-8" style="padding: 0px" align="center">
             <div class="card card-body bg-light" style="height: 500px">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-главная" role="tabpanel" aria-labelledby="list-главная-list">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <h3>{{ date }}</h3>
-                            </li>
+                        <h3>{{ date }}</h3>
                             <ul>
                                 {% for item in accounts %}
                                 <li>{{ item }}</li>
                                 {% endfor %}
                             </ul>
-                            <li><button type="button" class="btn btn-success">Добавить транзакцию</button></li>
-                        </ul>
+                            <p></p>
+                            <button type="button" class="btn btn-success">Добавить транзакцию</button>
                     </div>
                     <div class="tab-pane fade" id="list-счета" role="tabpanel" aria-labelledby="list-счета-list">Вот счета</div>
                     <div class="tab-pane fade" id="list-статистика" role="tabpanel" aria-labelledby="list-статистика-list">Вот статистика</div>
@@ -54,7 +54,16 @@
         </div>
     </div>
     {% else %}
-<a href="login_page">Пожалуйста, войдите на сайт</a>
+    <div class="row">
+        <div class="col-4" style="padding: 0px" align="left">
+            <div class="card card-body bg-light" style="height: 500px">
+            </div>
+        </div>
+        <div class="col-4" style="padding: 0px" align="left">
+            <div class="card card-body bg-light" style="height: 500px">
+                <a href="login_page">Пожалуйста, войдите на сайт</a>
+            </div>
+        </div>
 {% endif %}
 </div>
 </body>

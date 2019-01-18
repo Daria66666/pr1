@@ -43,7 +43,7 @@ def login_page(request):
     return render_to_response('login_page.html')
 
 def do_logout(request):
-    if request.user.is_authentificated:
+    if request.user.is_authenticated:
         logout(request)
         return HttpResponseRedirect('login_page')
     else:
