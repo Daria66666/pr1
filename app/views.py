@@ -1,7 +1,8 @@
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
-from .models import Account
+from .models import Account, Client
+from django.contrib.auth.models import User
 
 
 def index(request):
@@ -48,3 +49,19 @@ def do_logout(request):
         return HttpResponseRedirect('login_page')
     else:
         return HttpResponse('Ты не залогинен')
+
+def java(request):
+    return render_to_response('java.html')
+
+def register(request):
+    user = User.objects.create_user(
+        request.POST['login'],
+        password=request.POST['password'],
+        email=request.POST['email']
+    )
+    client=Client(user=user)
+    client.save()
+    return HttpResponseRedirect('/login_page')
+
+def registration_page(request):
+    return render_to_response('registration_page.html')
