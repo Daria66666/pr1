@@ -19,11 +19,11 @@
         <form method="post" action="/register">
             <div class="form-group">
                 <label for="login">Логин</label>
-                <input type="text" name="login" class="form-control" id="login" placeholder="Введите логин">
+                <input type="text" name="login" class="form-control" id="login" pattern="\w+" minlength="3" maxlength="20" placeholder="Введите логин">
               </div>
               <div class="form-group">
                 <label for="password">Пароль</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="Введите пароль">
+                <input type="password" name="password" class="form-control" id="password" pattern="\w+" minlength="6" maxlength="20" placeholder="Введите пароль">
               </div>
             <div class="form-group">
                 <label for="email">email</label>
