@@ -61,7 +61,7 @@ def register(request):
     )
     client=Client(user=user)
     client.save()
-    return HttpResponseRedirect('/login_user')
+    return HttpResponseRedirect('/login_page')
 
 def registration_page(request):
     return render_to_response('registration_page.html')
