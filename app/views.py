@@ -1,5 +1,5 @@
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render_to_response
 from .models import Account, Client
 from django.contrib.auth.models import User
@@ -65,3 +65,17 @@ def register(request):
 
 def registration_page(request):
     return render_to_response('registration_page.html')
+
+def ajax_path(request):
+    response = {
+        'message': 10
+        }
+    return JsonResponse(response)
+
+def notuniqlogin(request):
+    if len(User.objects.filter(username=request.POST['login'])) == 0:
+        response = True
+    else:
+        response = False
+    return JsonResponse(response)
+#IntegrityError

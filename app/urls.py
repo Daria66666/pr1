@@ -10,4 +10,6 @@ urlpatterns = [
     path('java', views.java, name='java'),
     path('register', views.register, name='register'),
     path('registration_page', views.registration_page, name='registration_page'),
+    path('ajax_path', views.ajax_path, name='ajax_path'),
+    path('notuniqlogin', views.notuniqlogin, name='notuniqlogin'),
 ]
