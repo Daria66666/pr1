@@ -20,7 +20,7 @@ $(document).ready(function(){
         e.preventDefault()}
         $.post(
              "notuniqlogin",
-            function(response){if (response){ alert('Такой логин занят')}
+            function(response) {if (response){ alert('Такой логин занят')}
     })
         $('#loginbutton').click(function(e) {
             username = $('#username').val()
