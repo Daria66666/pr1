@@ -78,4 +78,3 @@ def notuniqlogin(request):
     else:
         response = False
     return JsonResponse(response)
-#IntegrityError
